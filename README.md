@@ -1,4 +1,4 @@
-# !!!Replace with your unique project name!!!
+# ColorVisionProject_Munstock_Tyler
 
 ## Description
 
@@ -15,7 +15,7 @@
 
 ## Developer
 
-!!!Replace with your name!!!
+Tyler Munstock
 
 ## Example
 
