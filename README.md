@@ -29,7 +29,12 @@ Here is an example of the program running:
 
 ```
 Enter the number of colors you would like to input. Please pick a number greater than 1.
-5
+Number of Colors: 1
+
+That number is not greater than 1, please pick a number that is 2 or higher.
+Enter the number of colors you would like to input. Please pick a number greater than 1.
+Number of Colors: 5
+
 Please Enter a color.
 Please Enter a color.
 blue
@@ -39,9 +44,11 @@ Please Enter a color.
 red
 Please Enter a color.
 green
-Store your List on a seperate, organzed file. 
+
+Store your List on a seperate, organized file. 
 Enter a name you'd like for your file.
-PleaseWork
+MyUniqueColors  
+
 Your Unique Colors Are: 
 
 blue
