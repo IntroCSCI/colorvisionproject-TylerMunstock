@@ -6,8 +6,7 @@ In this current iteration of the program. I currently am asking the User to inpu
 
 ### v0.2 Updates
 
-*Coming soon*
-
+In this iteration of the Color Vision Program. I had changed up a few things, first off I had cleaned up my code to make it run more efficiently as well as appearing more coder-friendly (adding more comments, cleaner code, etc). Secondly, I had changed the information I gather from the User, instead of gathering hexidecimal data from the user and converting it to a color. I am doing to opposite, I am not gathering colors from the users (cin) and then converting those colors to hexidecimal for further use. I have created two functions, one called UniqueColor and one called CreateAndStoredColors. UniqueColor will evaluate the colors within a Vector I had created and checks whether or not the current input matches any of the previous inputs, if so it deletes one of the duplicate inputs. CreateAndStoredColors is a function that allows the User to create a new text file, where their Unique List of selected colors will be.
 ### v1.0 Updates
 
 *Coming soon*
@@ -31,53 +30,77 @@ Here is an example of the program running:
 ```
 Enter the number of colors you would like to input. Please pick a number greater than 1.
 5
-Pick a number between 0 and 255.(0)
-0
-Pick a number between 0 and 255.(1)
-255
-Pick a number between 0 and 255.(2)
-100
-Pick a number between 0 and 255.(3)
-45
-Pick a number between 0 and 255.(4)
-90
+Please Enter a color.
+Please Enter a color.
+blue
+Please Enter a color.
+red
+Please Enter a color.
+red
+Please Enter a color.
+green
+Store your List on a seperate, organzed file. 
+Enter a name you'd like for your file.
+PleaseWork
+Your Unique Colors Are: 
+
+blue
+red
+green
 ```
 
 ## C++ Guide
 
 ### Variables and Data Types
 
-Current List of Variables:
+**In Main:***
+  *vector<string> colorList;*
+ *int numberOfColors;*
+  *string color;*
+  *string file;*
 
-  int numberOfColors;
-  int colorArr[0];
-  int hxdColorValue;
-  int forLoopCounter;
-  string userDecision;
+**In UniqueColor:**
+  *int evaluation;*
 
 ### Console Input and Output
+Console asks for User Input for the number of colors they would like to select. Next the Console asks the User to Input a color, and we keep asking the user this until they have inputted the number of colors they had originally chosen. Finally the console asks the User to input a name for a file in which all of their colors will be saved too. After entering the name for their file. The Console outputs all of the Users Unique Colors.
 
-Through asking the User for the exact number of colors they would like to be evaluating and giving Users the option to any color at their disposal.
 
 ### Decisions
 
-With a variety of ForLoops. We can determine if the User has inputted a number greater than 1, and if they have inputted a valid Hexidecimal Value for each of their color inputs.
+*DoWhile Loop:* If the User inputs a number less than 2 when selecting the amount of colors they would like to select, we ask the user to try again and remind them to input a number greater than or equal to 2.
+
+*ForLoop:* After the User inputs a valid number for selecting colors. We run through a for loop, having the user continously decide on new colors to input until the number of colors they have inputted, equals the number of colors the user wished to input.
+
+*OfStream:* Allows the user to name their created file.
 
 ### Iteration
 
-By iterating through a ForLoop we can go through every color the user wishes to input.
+*ForLoop1(In Main):* After the User inputs a valid number for selecting colors. We run through a for loop, having the user continously decide on new colors to input until the number of colors they have inputted, equals the number of colors the user wished to input.
+
+*ForLoop2(In Main):* After the Program was run and the Console has gathered all of the needed User Input. The Console will then print out all of the Users Unique Colors they had inputted. 
+
+*ForLoop3(In UniqueColor):* After a color has been inputted the UniqueColor Function is ran, which will use the inputted color as the Evaluated Color, and by iterating through every other item within that List of Colors, we can determine whether or not the Evaluated Color is Unique or Not.
+
+*ForLoop4(In CreateAndStoredColors):* After the Program was run and the Console has gathered all of its information from the User. The ForLoop in this Function will iterate through itself printing every item from the ColorList to the New File.
 
 ### File Input and Output
 
-!!!Replace with a summary and examples of how input and/or output of files have been used effectively and appropriately!!!
+By using OfStream within my CreateAndStoredColors Function, I allow the user to create their own Text File that will store every Unique Color from the List of Colors created in Main.
 
 ### Arrays/Vectors
 
-*Coming in version 0.2*
+  *vector<string> colorList;*
+    This Vector stores a List of strings that is inputted by the user that is manipulated by the two functions (UniqueColor & CreateAndStoredColors). See below for information on the two Functions.
 
 ### Functions
+*bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor);*
+  UniqueColors will evaluate every color that the user inputs and run it through a list of every other item already inputted. If the forLoop finds a match, meaning the function found a duplicate color, we will delete that duplicate color from the colorList, if the loop is able to get through the entire list, that means we have not found a match and the function will then add that color to the colorList.
+  **Current Limitation:** Only works if colors are repeated one after another.
+   (Example: Inputting - Red, Red, Green will only Output Red, Green but Inputting - Red, Green, Red will output all three inputs)
 
-*Coming in version 0.2*
+*void CreateAndStoredColors(const vector<string> & uniqueColorList, string fileName);*
+  CreateAndStoredColors will create a new text file and store every unique color to that new file. By asking the user for a name for this file we then create a file based off of the User's input. Then we print every unique color to that new file for the User to keep.
 
 ### Classes
 
