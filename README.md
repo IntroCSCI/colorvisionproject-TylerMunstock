@@ -2,7 +2,7 @@
 
 ## Description
 
-In this current iteration of the program. I currently am asking the User to input the amount of colors they would like to input, so that the number they chose was greater than one. After choosing a valid number. I ask the User that many times to enter a value between 0 and 255 (hexidecimal values) that will later be used and converted into colors.
+In this current iteration of the program. I currently am asking the User to input the amount of colors they would like to input, so that the number they chose was greater than one. After choosing a valid number. I ask the User that many times to enter a color, after all colors have been inputted, the user is then prompted to create a name for a file in which their uniquely listed colors will appear.
 
 ### v0.2 Updates
 
