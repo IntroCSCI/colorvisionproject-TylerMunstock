@@ -2,21 +2,14 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include "colors.h"
 using namespace std;
 
-//Problems:
-//For Loop iterates once through before allowing cin (L: 39-42).
-    //This problem causes our final cout statement to print an endLine before printing any colors/words.
-//UniqueColors Function only works if colors are repeated immediately after one another (L: 76-102).
 
-/*
-This Program should do the following:
-- Ask User to number of colors to be inputted, such that x > 1
-- 
-*/
 int main()
 {
   //Member Variables 
+  Color colorInstance;
   vector<string> colorList;
   int numberOfColors;
   string color;
@@ -48,6 +41,10 @@ int main()
   for(int i = 0; i < numberOfColors; i++)
   {
     cout << "Please Enter a color." << endl;
+    colorInstance.ChooseColors(colorList, color);
+    colorInstance.UniqueColors(colorList, color);
+    //Color::ChooseColor Here
+    //Color::UniqueColor Here
     getline(cin, color);
 
     //At the end of the list, endLine to make the Console look cleaner
@@ -86,6 +83,9 @@ int main()
   return 0;
 }
 
+//REMOVE THIS WHOLE FUNCTION 
+
+/*
 //This function will determine if a Color is Unique or Not  
 //This function should run every time the user inputs a color.
 bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor)
@@ -108,19 +108,16 @@ bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor)
       evaluation = 0;
     }
   }
-  //If our evaluation equals 1, return the function as true
-  //If not, we return the function as false
-  //Also, we don't use curly brackets here to not get the green squiggly line under the brace at the end of this function, because every path of the function requires a return value of its declaration type (in this case of Type bool)
   if (evaluation == 1)
     return true; 
   else
     return false;
 }
 
+*/
+
 //This function will create a text file of the User's Choice
 //And write their colorList to that newFile
-  //NOTE:
-  //CONST means constant, meaning the values that get placed into this vector<string> will remain CONSTANT and not change. The & is a Pass-By-Reference, which means it will gather the information from its reference, and hold that information.
 void CreateAndStoredColors(const vector<string> & uniqueColorList, string fileName)
 {
   //Creates a File with any name the User Inputs
