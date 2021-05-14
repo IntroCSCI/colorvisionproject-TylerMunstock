@@ -9,7 +9,7 @@ In this current iteration of the program. I currently am asking the User to inpu
 In this iteration of the Color Vision Program. I had changed up a few things, first off I had cleaned up my code to make it run more efficiently as well as appearing more coder-friendly (adding more comments, cleaner code, etc). Secondly, I had changed the information I gather from the User, instead of gathering hexidecimal data from the user and converting it to a color. I am doing to opposite, I am not gathering colors from the users (cin) and then converting those colors to hexidecimal for further use. I have created two functions, one called UniqueColor and one called CreateAndStoredColors. UniqueColor will evaluate the colors within a Vector I had created and checks whether or not the current input matches any of the previous inputs, if so it deletes one of the duplicate inputs. CreateAndStoredColors is a function that allows the User to create a new text file, where their Unique List of selected colors will be.
 ### v1.0 Updates
 
-*Coming soon*
+In the final iteration of the Color Vision Project, I had cleaned up my code greatly. I started out by re-commenting any code that was not explained properly as well as reworking a couple functions in order for them to appear more clear as well as run more efficiently. After I had cleaned up my current code I had created a colors.cpp and .h file in order to create a Class which I called Color. Using this class I created a variety of methods and fields that was the used to make my code much more efficient and effective than it previously was.
 
 
 ## Developer
