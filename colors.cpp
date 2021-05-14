@@ -1,42 +1,39 @@
 #include "colors.h"
-#include <string>
-#include <string>
+#include <iostream>
 
+	//Adds a color to the list of colors
+	void Color::AddColor(string color)
+	{
+		Color::colorList.push_back(color);
+	}
 
-using std::string;
-using std::vector;
-
-bool Color::UniqueColors(vector<string> uniqueColorList, string evaluatedColor)
+//This function should determine if a color is unique or not in the list
+void Color::UniqueColors(vector<string> uniqueColorList, string evaluatedColor)
 {
   uniqueColorList = Color::colorList;
   evaluatedColor = Color::color;
-
-  //Used to determine if a color is Unique or Not
-  int evaluation;
 
   for(int i = 0; i < uniqueColorList.size(); i++)
   {
       if(uniqueColorList[i] == evaluatedColor)
     {
-      //Found Duplicate, set evaluation to 1
-      evaluation = 1;
+      //Found Duplicate
+			Color::colorList.pop_back();
     }
     else
     {
-      //Did Not Find Duplicate, set evaluation to 0
-      evaluation = 0;
-    }
+      //Did Not Find Duplicate
+			Color::colorList.push_back(evaluatedColor);
+		}
   }
-  if (evaluation == 1)
-    return true; 
-  else
-    return false;
-  }
-  
-void Color::ChooseColors(vector<std::string> colorList, string color)
+}
+
+//This function should print out each color in the list
+void Color::PrintColors(vector<std::string> colorList)
 {
-  colorList = Color::colorList;
-  color = Color::color;
-   cin >> color;
-  colorList.push_back(color);
+	colorList = Color::colorList;
+	for(int i = 0; i < colorList.size(); i++)
+	{
+		std::cout << (colorList[i]) << std::endl;
+	}
 }

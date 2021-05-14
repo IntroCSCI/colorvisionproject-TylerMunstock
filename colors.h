@@ -14,8 +14,9 @@ class Color
     string color;
   
   public: // Can be used directly INSIDE and OUTSIDE this class
-    bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor);
-    void ChooseColors(vector<string> colorList, string color);
+    void UniqueColors(vector<string> uniqueColorList, string evaluatedColor);
+		void PrintColors(vector<string> colorList);
+		void AddColor(string color);
 };
 
 #endif
