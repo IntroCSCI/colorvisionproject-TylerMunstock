@@ -17,7 +17,7 @@ int main()
 
   //Declaring Functions
   //bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor);
-  void CreateAndStoredColors(const vector<string> & uniqueColorList, string fileName);
+  void CreateAndStoredColors(vector<string> & uniqueColorList, string fileName);
 
   //Get user input on how many colors will be inputted
 	do
@@ -69,7 +69,7 @@ int main()
 
 //This function will create a text file of the User's Choice
 //And write their colorList to that newFile
-void CreateAndStoredColors(const vector<string> & uniqueColorList, string fileName)
+void CreateAndStoredColors(vector<string> & uniqueColorList, string fileName)
 {
 	//Creates a File with any name the User Inputs
   cout << "Store your List on a seperate, organized file. " << endl;

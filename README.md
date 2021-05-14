@@ -103,12 +103,11 @@ By using OfStream within my CreateAndStoredColors Function, I allow the user to 
 ### Functions
 *bool UniqueColors(vector<string> uniqueColorList, string evaluatedColor);*
   UniqueColors will evaluate every color that the user inputs and run it through a list of every other item already inputted. If the forLoop finds a match, meaning the function found a duplicate color, we will delete that duplicate color from the colorList, if the loop is able to get through the entire list, that means we have not found a match and the function will then add that color to the colorList.
-  **Current Limitation:** Only works if colors are repeated one after another.
-   (Example: Inputting - Red, Red, Green will only Output Red, Green but Inputting - Red, Green, Red will output all three inputs)
 
 *void CreateAndStoredColors(const vector<string> & uniqueColorList, string fileName);*
   CreateAndStoredColors will create a new text file and store every unique color to that new file. By asking the user for a name for this file we then create a file based off of the User's input. Then we print every unique color to that new file for the User to keep.
 
 ### Classes
 
-*Coming in version 1.0*
+In this program we have a class named Color which takes in 3 private variables, a Vector<string>, int and string. As well as three public fields, void AddColor, void UniqueColor and void PrintColors. These members and fields all help this code run more efficiently as well as appearing more clean and with a level as style to it. The AddColor function takes in user input as a color they have selected it and adds it to the vector (List) of colors. UniqueColor runs immediately after AddColor is run to determine if the recently entered color is unique or not, if it is unique it is allowed to stay in the list, if it is not then it is removed. Finally the third function is PrintColors, which takes every color in the list of colors and neatly prints them on-screen, as well as into the newly created .txt file for the user to look at their chosen colors. 
+**CURRENT LIMITATION:** To some extent the UniqueColor function does not work properly in getting rid of all duplicate entries, and I am unsure as to why.
